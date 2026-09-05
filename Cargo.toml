@@ -1,0 +1,18 @@
+[package]
+name = "stanzaapi-gs1-decoder"
+version = "1.0.0"
+edition = "2021"
+authors = ["Stanza"]
+description = "Official high-speed Rust client for GS1 Barcode & Digital Link Decoder"
+license = "MIT"
+readme = "README.md"
+homepage = "https://stanzaapi.com/tools/gs1-decoder"
+repository = "https://github.com/stanzaapi/gs1-decoder-rust"
+keywords = ["gs1-barcode","digital-link","sunrise-2027","gtin","datamatrix"]
+categories = ["web-programming::http-client", "development-tools::ffi"]
+
+[dependencies]
+reqwest = { version = "0.12", default-features = false, features = ["json", "rustls-tls"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+tokio = { version = "1.0", features = ["macros", "rt-multi-thread"], optional = true }
